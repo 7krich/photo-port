@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import functions from react testing lib
-// render component in simulate DOM
+// render component in simulated DOM
 // clean up will remove components from DOM to prevent memory leaking
 import { render, cleanup } from '@testing-library/react';
 
