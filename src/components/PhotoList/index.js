@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function PhotoList({ category }) {
+const PhotoList = ({ category }) => {
     const [photos] = useState([
         {
           name: 'Grocery aisle',
@@ -96,10 +96,10 @@ function PhotoList({ category }) {
           name: 'Park bench',
           category: 'landscape',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
-        },
+        }
     ]);
 
-    const currentPhotos = photos.filter((photo) => photo.category === category);
+    const currentPhotos = photos.filter(photo => photo.category === category);
 
     return (
         <div>
