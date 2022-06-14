@@ -11,11 +11,16 @@ function ContactForm() {
         // e.target.name -> name refers to the name attribute for the form elements (name, email, message)
         setFormState({...formState, [e.target.name]: e.target.value })
     }
-    console.log(formState)
+
+    // handle submission of the form
+    function handleSubmit(e) {
+        e.preventDefault();
+        console.log(formState);
+    }
     return(
         <section>
             <h1>Contact me</h1>
-            <form id="contact-form">
+            <form id="contact-form" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="name">Name:</label>
                     <input type="text" defaultValue={name} name="name" onChange={handleChange}/>
